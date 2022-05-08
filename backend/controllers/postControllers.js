@@ -1,6 +1,7 @@
 /************************************** DECLARATIONS ET IMPORTATIONS  ******************************************/
 const db = require("../models");
 const fs = require("fs");
+//const { nextTick } = require("process");
 
 /************************************** LOGIQUE MÉTIER  ******************************************/
 exports.getAllPosts = (req, res) => {
@@ -69,9 +70,9 @@ exports.getOnePost = (req, res) => {
     });
 };
 
-exports.createPost = (req, res) => {
+exports.createPost = (req, res,) => {
   db.User.findOne({
-    where: { id: req.userId },
+    where: { id:req.userId },
   })
     .then((user) => {
       if (user !== null) {
@@ -107,6 +108,7 @@ exports.createPost = (req, res) => {
       console.log(error);
       res.status(500).json({ error: "erreur serveur" });
     });
+    
 };
 
 exports.updatePost = (req, res) => {

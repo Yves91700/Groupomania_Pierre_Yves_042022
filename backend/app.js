@@ -1,11 +1,17 @@
 //************* Importations***************** */
 const express = require("express");
 const bodyParser = require("body-parser");
+
+//on appelle express avec cette const et qui permet de créer l'application express
+const app = express();
+
 // importation de cors systeme de securité
 const cors = require("cors");
 
 // importation de morgan "http request logger"
 const morgan = require("morgan");
+
+
 
 
 // importation du module path qui fournit des utilitaires pour travailler avec les chemins de fichiers et de répertoires.
@@ -14,8 +20,7 @@ const path = require("path");
 // Importation du module dotenv pour utiliser les variables d'environnement écrites dans le  fichier .env dans le répertoire racine du dossier backend
 require("dotenv").config();
 
-//on appelle express avec cette const et qui permet de créer l'application express
-const app = express();
+
 
 // log des requests et des responses
 app.use(morgan("dev"));
@@ -40,6 +45,11 @@ const routesDesUsers = require ("./routes/userRoute");
 
 app.use(cors());
 
+
+
+
+
+
 //******************************************************************************************************************************* */
 
 const db = require("./models");
@@ -57,7 +67,11 @@ db.sequelize
       "Echec la connection à la base de données mysql a échouée ! : ",
       error
     );
-  }); 
+  });
+
+  
+ // db.sequelize.sync({ force: true });
+  //console.log("All models were synchronized successfully.");
 
 
 

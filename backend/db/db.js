@@ -1,4 +1,3 @@
-
 /*
 // Importation du module dotenv pour utiliser les variables d'environnement écrites dans le  fichier .env dans le répertoire racine du dossier backend
 require("dotenv").config();
@@ -16,15 +15,17 @@ const db = mysql.createConnection({
   password : 'Puffy91700@Fleury',
   database : 'groupomania'
 });
-console.log(db);
+
+
+
  
 db.connect((err) => {
   if (err) {
     return console.error(`error connecting:' ${err}`);
   } else{
-    console.log('connecté à la base de données groupomania');
+    console.log('connecté à la base de données groupomania_social_network2');
     console.log( `connected as id ${db.threadId}`);
   }
-});  */
+});  
  
-
+module.exports = db;*/

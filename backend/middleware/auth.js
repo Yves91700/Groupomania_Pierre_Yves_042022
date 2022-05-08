@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
     console.log("--->middleware/auth.js CONTENU: TOKEN");
     console.log(token);
 
-    const decodedToken = jwt.verify(token, process.env.SECRET_TOKEN); // Fonction verify pour décoder notre token
+    const decodedToken = jwt.verify(token, process.env.JWT_KEY_TOKEN); // Fonction verify pour décoder notre token
     console.log("--->middleware/auth.js  CONTENU: decodedToken");
     console.log(decodedToken);
 
