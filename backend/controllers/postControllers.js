@@ -72,7 +72,7 @@ exports.getOnePost = (req, res) => {
 
 exports.createPost = (req, res,) => {
   db.User.findOne({
-    where: { id:req.userId },
+    WHERE: { id:req.userId },
   })
     .then((user) => {
       if (user !== null) {
@@ -168,7 +168,7 @@ exports.deletePost = (req, res) => {
       if (msgFound) {
         db.User.findOne({
           attributes: ["isAdmin"],
-          where: { id: req.userId },
+          WHERE: { id: req.userId },
         })
           .then((userIsAdmin) => {
             // Si l'utilisateur est le créateur OU admin dans la db, on supprime le message
@@ -184,7 +184,7 @@ exports.deletePost = (req, res) => {
                     const filename = message.attachment.split("/images/")[1];
                     fs.unlink(`images/${filename}`, () => {
                       db.Message.destroy({
-                        where: { id: message.id },
+                        WHERE: { id: message.id },
                       })
                         .then(() => res.end())
                         .catch((err) => res.status(500).json(err));
