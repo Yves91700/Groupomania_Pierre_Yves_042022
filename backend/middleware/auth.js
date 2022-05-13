@@ -2,8 +2,6 @@
 const jwt = require("jsonwebtoken");
 
 
-
-
 //importation pour utilisation des variables d'environnements
 require("dotenv").config();
 
@@ -15,7 +13,7 @@ module.exports = (req, res, next) => {
     console.log("--->middleware/auth.js CONTENU: TOKEN");
     console.log(token);
 
-    const decodedToken = jwt.verify(token, process.env.JWT_KEY_TOKEN); // Fonction verify pour décoder notre token
+    const decodedToken = jwt.verify(token, `${process.env.JWT_KEY_TOKEN}`); // Fonction verify pour décoder notre token
     console.log("--->middleware/auth.js  CONTENU: decodedToken");
     console.log(decodedToken);
 
@@ -26,8 +24,9 @@ module.exports = (req, res, next) => {
 
     if (req.body.userId && req.body.userId !== userId) {
       // si la demande contient un ID utilisateur, nous le comparons à celui extrait du token.
-      throw "Invalid user ID"; // Si il est différent "throw" passe le contrôle au prochain bloc catch (error)
+      throw " User ID non valable"; // Si il est différent "throw" passe le contrôle au prochain bloc catch (error)
     } else {
+      req.userId = userId
       next(); //Sinon on passe la requête au middleware suivant
     }
   } catch (error) {

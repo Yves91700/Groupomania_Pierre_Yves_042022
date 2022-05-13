@@ -70,8 +70,8 @@ db.sequelize
   });
 
   
- // db.sequelize.sync({ force: true });
-  //console.log("All models were synchronized successfully.");
+   db.sequelize.sync({ force: false });
+  console.log("All models were synchronized successfully.");
 
 
 
