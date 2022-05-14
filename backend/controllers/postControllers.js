@@ -1,7 +1,7 @@
 /************************************** DECLARATIONS ET IMPORTATIONS  ******************************************/
 const db = require("../models");
 const fs = require("fs");
-//const { nextTick } = require("process");
+
 
 /************************************** LOGIQUE MÉTIER  ******************************************/
 exports.getAllPosts = (req, res) => {
