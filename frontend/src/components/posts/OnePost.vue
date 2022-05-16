@@ -267,11 +267,11 @@
           <v-list-item>
             <!-- Date du commentaire -->
 
-        <!----------------------format date 
+        
             <v-card-text class="end text-caption"
               >le {{ comment.createdAt|formatDate }}</v-card-text
             >
-         -------------------------------------------------->
+         
     
             <!-- Bouton suppression du commentaire si propriétaire ou administrateur -->
 
