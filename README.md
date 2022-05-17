@@ -22,24 +22,33 @@ Périmètre
 * l'accès à un forum où les salariés publient des textes doivent être présents.
 * les utilisateurs doivent pouvoir facilement repérer les dernières participations des employés.
 * le ou la chargé-e de communication Groupomania doit pouvoir modérer les interactions entre salariés.
-* 
+
 Technologies utilisées :
 
 VueJs + vuex + vuetify 
 NodeJs + express + sequelize Mysql
 
 Frontend:
+
 Ouvrir le dossier Frontend dans le terminal de votre éditeur puis effectuer la commande :
 npm install
  puis
-npm serve 
+npm  run serve 
 si le navigateur ne s'ouvre pas automatiquement allez à :
 http://localhost:8080/
 
 Back-end :
+
 Ouvrir le dossier Backend dans le terminal de votre éditeur puis effectuer la commande :
 npm install puis
-npm start ou nodemon serve
+npm run start ou nodemon serve
 le serveur se lance sur http://localhost:3000/
 
 Base de données
+
+Se connecter au serveur MySql de votre choix.
+ Exécuter la commande: CREATE DATABASE groupomania;
+ Vérifiez les identifiants du fichier config.js du dossier Backend dans le fichier .env ,
+  puis importer le fichier groupomaniaBDD.sql present dans le code avec :
+
+  mysql -u root -p groupomania < groupomaniaBDD.sql

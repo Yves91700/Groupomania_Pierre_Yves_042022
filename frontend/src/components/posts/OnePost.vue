@@ -53,13 +53,13 @@
               <v-list-item-title class="font-weight-medium">{{
                 message.User.username
               }}</v-list-item-title>
-<!--********************************************************************************* -->
+<!--------------------------------------Date du post--------------- -->
             
               <v-list-item-title class="text-caption">{{
                 message.updatedAt|formatDate
               }}</v-list-item-title> 
 
-<!--*******************************************************************************-->
+
             </v-list-item-content>
           </v-list-item>
 
