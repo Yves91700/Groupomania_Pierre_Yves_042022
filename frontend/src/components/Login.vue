@@ -1,6 +1,6 @@
 <template>
   <v-card width="400" class="mx-auto mt-5 rounded-xl" elevation="10">
-    <v-card-title>Crée un compte ou connecté vous</v-card-title>
+    <v-card-title>Créer un compte ou se connecter</v-card-title>
     <v-img class="mb-5" contain height="300" src="../assets/icon.svg"></v-img>
     <v-row align="center" justify="center">
       <v-btn class="grey accent-2 mb-5" elevation="2" plain small to="/signup">
