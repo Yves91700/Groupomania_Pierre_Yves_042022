@@ -11,7 +11,7 @@
     <v-row>
       <v-col cols="12">
         <v-card
-          class="mx-auto blue-grey darken-4"
+          class="mx-auto blue-grey darken-2"
           min-width="300"
           max-width="80vw"
         >

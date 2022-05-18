@@ -45,6 +45,7 @@
           v-on="on"
           aria-label="Aller à la page de mon compte"
         >
+        <!-- bouton mon profil -->
           <v-icon>
             mdi-account-circle
           </v-icon>
@@ -62,6 +63,7 @@
           v-on="on"
           aria-label="Se déconnecter"
         >
+        <!-- bouton deconnexion -->
           <v-icon>
             mdi-location-exit
           </v-icon>

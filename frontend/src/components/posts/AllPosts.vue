@@ -1,5 +1,5 @@
 <template>
-  <v-app class="blue-grey darken-4">
+  <v-app class="blue-grey darken-2">
     <v-container justify-content="center" align="center">
       <!-- test fab button -->
       <v-tooltip fixed right bottom>

@@ -3,7 +3,7 @@
     <v-card width="400" class="mx-auto mt-5 rounded-xl">
       <v-img class="mb-5" contain height="300" src="../assets/icon.png"></v-img>
       <v-card-title class="mx-auto mt-5 text-xs-center "
-        >Créer une nouveau compte</v-card-title
+        >Créer une nouveau compte </v-card-title
       >
       <v-card-text>
         <v-form v-model="valid" ref="form">
